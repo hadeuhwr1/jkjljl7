@@ -32,8 +32,12 @@ const DashboardLayout: React.FC = () => {
       <div className="relative flex-1 flex flex-col overflow-hidden">
         <header className="relative z-10 px-3 sm:px-6 py-4 bg-gray-900/50 backdrop-blur-md border-b border-purple-900/30">
           <div className="flex justify-between items-center">
-            <XConnectButton />
-            <WalletButton />
+            <div className="flex-1">
+              <XConnectButton />
+            </div>
+            <div className="flex-1 flex justify-end">
+              <WalletButton />
+            </div>
           </div>
         </header>
 
