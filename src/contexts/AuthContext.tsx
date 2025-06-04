@@ -53,7 +53,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
     setIsConnectingX(true);
     try {
-      const response = await apiClient.post('/auth/x/connect');
+      const response = await apiClient.post('/auth/x/initiate-oauth');
       const { authUrl } = response.data;
       
       // Open X auth popup
