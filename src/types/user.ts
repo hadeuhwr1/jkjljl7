@@ -1,7 +1,3 @@
-// ===========================================================================
-// File: src/types/user.ts (MODIFIKASI: Tambahkan tipe AllyInfo dan AlliesListResponse)
-// Deskripsi: Definisi tipe untuk data pengguna.
-// ===========================================================================
 export interface UserProfile {
   commanderName: string;
   rankBadgeUrl?: string;
@@ -24,22 +20,21 @@ export interface UserPublic {
   rank: string;
   xp: number;
   referralCode?: string;
-  alliesCount: number; // Jumlah total sekutu yang dimiliki user ini
+  alliesCount: number;
+  xConnected?: boolean;
   profile: UserProfile;
   systemStatus?: UserSystemStatus;
   lastLogin?: string;
   createdAt: string;
 }
 
-// Tipe baru untuk informasi sekutu
 export interface AllyInfo {
-  id: string; // ID dari user yang direferensikan
+  id: string;
   username: string;
   rank: string;
-  joinedAt: string; // createdAt dari user yang direferensikan (dalam format ISO string)
+  joinedAt: string;
 }
 
-// Tipe baru untuk respons daftar sekutu dari API
 export interface AlliesListResponse {
   totalAllies: number;
   allies: AllyInfo[];

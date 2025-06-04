@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import WalletButton from '../components/WalletButton';
+import XConnectButton from '../components/XConnectButton';
 import NewsBar from '../components/NewsBar';
 
 const DashboardLayout: React.FC = () => {
@@ -30,7 +31,8 @@ const DashboardLayout: React.FC = () => {
 
       <div className="relative flex-1 flex flex-col overflow-hidden">
         <header className="relative z-10 px-3 sm:px-6 py-4 bg-gray-900/50 backdrop-blur-md border-b border-purple-900/30">
-          <div className="flex justify-end">
+          <div className="flex justify-between items-center">
+            <XConnectButton />
             <WalletButton />
           </div>
         </header>
